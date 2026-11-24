@@ -64,6 +64,9 @@ nav .btn{padding:.6em 1.2em;font-size:.95rem}
 .feature img{aspect-ratio:4/5;width:100%}
 .feature h2{margin-bottom:20px;max-width:14ch}
 .feature p{color:var(--muted)}
+.feature.flip{grid-template-columns:6fr 5fr}
+.feature.flip img{order:2;--tilt:2deg}
+.feature .link{display:inline-block;margin-top:24px}
 .ticks{list-style:none;margin-top:28px;display:grid;gap:12px}
 .ticks li{padding-left:28px;position:relative}
 .ticks li::before{content:"";position:absolute;left:0;top:.7em;width:14px;height:2px;background:var(--accent)}
@@ -260,3 +263,5 @@ details p{color:var(--muted);padding-bottom:22px}
   .hero-collage{height:400px;order:2}
 }
 @media (prefers-reduced-motion:reduce){.hero-collage img{animation:none}}
+
+@media (max-width:767px){.feature.flip{grid-template-columns:1fr}.feature.flip img{order:0}}
