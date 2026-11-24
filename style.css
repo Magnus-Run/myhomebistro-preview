@@ -55,7 +55,10 @@ nav .btn{padding:.6em 1.2em;font-size:.95rem}
 @keyframes up{from{opacity:0;transform:translateY(24px)}}
 
 /* intro statement */
-.intro{display:grid;gap:28px}
+.intro{display:grid;grid-template-columns:7fr 4fr;gap:clamp(32px,6vw,96px);align-items:center}
+.intro .link{display:inline-block;margin-top:28px}
+.intro img{aspect-ratio:4/5;width:100%;--tilt:2.5deg;border-radius:var(--r-photo);transform:rotate(var(--tilt));box-shadow:0 18px 40px rgba(0,0,0,.35);transition:transform .4s var(--ease)}
+.intro img:hover{transform:rotate(0) scale(1.02)}
 .statement{font-size:clamp(1.6rem,3.4vw,2.9rem);line-height:1.2;letter-spacing:-.02em;max-width:26ch;color:var(--muted)}
 .statement span{color:var(--text)}
 
@@ -265,3 +268,4 @@ details p{color:var(--muted);padding-bottom:22px}
 @media (prefers-reduced-motion:reduce){.hero-collage img{animation:none}}
 
 @media (max-width:767px){.feature.flip{grid-template-columns:1fr}.feature.flip img{order:0}}
+@media (max-width:767px){.intro{grid-template-columns:1fr}.intro img{width:82%;justify-self:end}}
