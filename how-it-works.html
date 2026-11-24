@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chef Shikha | How it works</title>
+<meta name="description" content="Fine dining at your table, by Chef Shikha. Myhomebistro is a bespoke food catering company in Mumbai.">
+<link rel="icon" href="images/cropped-SHIKHA-logo-1-e1523634897971.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1795554792">
+<meta name="robots" content="noindex, nofollow">
+<style>html.locked body>*:not(#gate){display:none!important}
+#gate{position:fixed;inset:0;background:var(--bg);display:grid;place-items:center;z-index:999}
+#gate form{display:grid;gap:14px;width:min(320px,90vw)}#gate img{width:140px;margin-bottom:12px}
+#gate label{font-size:.9rem;color:var(--muted)}</style>
+<script>
+if (sessionStorage.getItem('mhb-ok') !== '1') {
+  document.documentElement.classList.add('locked');
+  addEventListener('DOMContentLoaded', () => {
+    const g = document.createElement('div'); g.id = 'gate';
+    g.innerHTML = '<form><img src="images/SHIKHA-logo1.png" alt="Chef Shikha"><label for="pw">Preview for Chef Shikha. Enter the password.</label><input id="pw" type="password" autofocus><button class="btn">Enter</button></form>';
+    document.body.prepend(g);
+    g.querySelector('form').onsubmit = e => {
+      e.preventDefault();
+      if (g.querySelector('input').value.trim().toLowerCase() === 'bonjour') {
+        sessionStorage.setItem('mhb-ok', '1'); g.remove();
+        document.documentElement.classList.remove('locked');
+      } else g.querySelector('label').textContent = 'Wrong password, try again.';
+    };
+  });
+}
+</script>
+</head>
+<body class="inner">
+<header class="bar">
+  <a class="brand" href="index.html"><img src="images/SHIKHA-logo1.png" alt="Chef Shikha, home"></a>
+  <button class="menu-btn" aria-label="Open menu" onclick="document.body.classList.toggle('nav-open')">Menu</button>
+  <nav><ul><li><a href="chef-shikha.html">Meet Chef Shikha</a></li><li><a href="experiences.html">Experiences</a></li><li><a href="menus.html">Menus</a></li><li><a href="how-it-works.html" aria-current="page">How it works</a></li></ul><a class="btn" href="enquire.html">Plan your dinner</a></nav>
+</header>
+<main>
+<section class="page-head wrap"><h1>How it works</h1><p>Four steps from first message to last course.</p></section>
+<section class="steps wrap"><div class="rv"><span class="n">1</span><h3>Enquire</h3><p>Tell us the date, number of guests and the occasion.</p></div><div class="rv"><span class="n">2</span><h3>Design the menu</h3><p>Chef Shikha writes a menu around your evening, the season and any dietary needs.</p></div><div class="rv"><span class="n">3</span><h3>We cook and serve</h3><p>We arrive with everything for the table, cook, plate and serve in your home.</p></div><div class="rv"><span class="n">4</span><h3>You enjoy</h3><p>Sit back with your guests. We leave your kitchen as we found it.</p></div></section>
+<section class="faq wrap">
+  <h2 class="rv">Questions</h2>
+  <div class="rv"><details><summary>How many guests?</summary><p>From 2 to 50.</p></details><details><summary>Can you handle dietary needs?</summary><p>Yes. Tell us when you enquire and the menu is written around them.</p></details><details><summary>What do I need to provide?</summary><p>Your kitchen and your table. We bring the linen, cutlery, glasses and plates.</p></details><details><summary>How far ahead should I book?</summary><p>Get in touch as early as you can, especially around festivals.</p></details></div>
+</section>
+<section class="closer wrap rv"><h2>Ready when you are.</h2><a class="btn" href="enquire.html">Plan your dinner</a></section>
+
+</main>
+<footer class="foot">
+  <div class="foot-big"><img src="images/SHIKHA-logo1.png" alt="Chef Shikha"><p class="foot-line">Fine dining, cooked <em>at your table</em>.</p><p class="foot-meta">Myhomebistro &middot; bespoke food catering &middot; Mumbai</p></div>
+  <ul><li><a href="https://wa.me/919892386700" target="_blank" rel="noopener">WhatsApp</a></li>
+  <li><a href="mailto:myhomebistro.shikha@gmail.com">myhomebistro.shikha@gmail.com</a></li>
+  <li><a href="https://www.instagram.com/myhomebistro.shikha" target="_blank" rel="noopener">Instagram</a></li>
+  <li><a href="https://www.facebook.com/myhomebistro.shikha/" target="_blank" rel="noopener">Facebook</a></li></ul>
+  <p class="fine">Copyright 2026 Myhomebistro</p>
+</footer>
+<script>
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}), {threshold: .15});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

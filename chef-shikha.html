@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chef Shikha | Meet Chef Shikha</title>
+<meta name="description" content="Fine dining at your table, by Chef Shikha. Myhomebistro is a bespoke food catering company in Mumbai.">
+<link rel="icon" href="images/cropped-SHIKHA-logo-1-e1523634897971.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1795554792">
+<meta name="robots" content="noindex, nofollow">
+<style>html.locked body>*:not(#gate){display:none!important}
+#gate{position:fixed;inset:0;background:var(--bg);display:grid;place-items:center;z-index:999}
+#gate form{display:grid;gap:14px;width:min(320px,90vw)}#gate img{width:140px;margin-bottom:12px}
+#gate label{font-size:.9rem;color:var(--muted)}</style>
+<script>
+if (sessionStorage.getItem('mhb-ok') !== '1') {
+  document.documentElement.classList.add('locked');
+  addEventListener('DOMContentLoaded', () => {
+    const g = document.createElement('div'); g.id = 'gate';
+    g.innerHTML = '<form><img src="images/SHIKHA-logo1.png" alt="Chef Shikha"><label for="pw">Preview for Chef Shikha. Enter the password.</label><input id="pw" type="password" autofocus><button class="btn">Enter</button></form>';
+    document.body.prepend(g);
+    g.querySelector('form').onsubmit = e => {
+      e.preventDefault();
+      if (g.querySelector('input').value.trim().toLowerCase() === 'bonjour') {
+        sessionStorage.setItem('mhb-ok', '1'); g.remove();
+        document.documentElement.classList.remove('locked');
+      } else g.querySelector('label').textContent = 'Wrong password, try again.';
+    };
+  });
+}
+</script>
+</head>
+<body class="inner">
+<header class="bar">
+  <a class="brand" href="index.html"><img src="images/SHIKHA-logo1.png" alt="Chef Shikha, home"></a>
+  <button class="menu-btn" aria-label="Open menu" onclick="document.body.classList.toggle('nav-open')">Menu</button>
+  <nav><ul><li><a href="chef-shikha.html" aria-current="page">Meet Chef Shikha</a></li><li><a href="experiences.html">Experiences</a></li><li><a href="menus.html">Menus</a></li><li><a href="how-it-works.html">How it works</a></li></ul><a class="btn" href="enquire.html">Plan your dinner</a></nav>
+</header>
+<main>
+<section class="page-head wrap"><h1>Meet Chef Shikha</h1></section>
+<section class="bio wrap">
+  <img class="rv" src="images/IMG_4783.jpg" alt="Chef Shikha in the kitchen">
+  <div class="rv">
+    <p class="big">As long as I remember I have loved big family dinners. Food can be a great way to bond with family and friends. It can also be an escape into something exotic and new.</p>
+    <p>Before food, I spent over ten years in television, producing the cooking shows "Sunny Side Up" and "Pure Sin" and directing "Unexplored Goa" for National Geographic. In 2016 my hunger for cooking took me to Paris, to train as a chef at Ferrandi and to work at Kokoro. In 2018 I spent three months at Fäviken in Sweden, foraging, preserving and cooking.</p>
+    <p>In 2017 I started Myhomebistro so everyone can experience fine dining in their own home. I believe the most exquisite tastes come from local and seasonal produce, so one ingredient is always the star.</p>
+    <p class="sign">Shikha</p>
+  </div>
+</section>
+<section class="quote wrap rv"><blockquote>&ldquo;It was God who created oysters and apples. And you can&rsquo;t improve recipes like that. But it&rsquo;s our job to try.&rdquo;</blockquote><p>From the film Burnt, a favourite of Chef Shikha</p></section>
+<section class="cv wrap">
+  <h2 class="rv">Training and kitchens</h2>
+  <div class="cv-grid">
+    <div class="rv"><b>Ferrandi, Paris</b><span>Diploma in Chef de Cuisine, 2016</span></div>
+    <div class="rv"><b>Kokoro, Paris</b><span>Bib Gourmand. Intern, 2016</span></div>
+    <div class="rv"><b>Fäviken, Sweden</b><span>Two Michelin stars. Stagiaire, July to September 2018</span></div>
+    <div class="rv"><b>MAD Academy, Copenhagen</b><span>Leadership and Business programme on full scholarship, February 2022</span></div>
+  </div>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="foot-big"><img src="images/SHIKHA-logo1.png" alt="Chef Shikha"><p class="foot-line">Fine dining, cooked <em>at your table</em>.</p><p class="foot-meta">Myhomebistro &middot; bespoke food catering &middot; Mumbai</p></div>
+  <ul><li><a href="https://wa.me/919892386700" target="_blank" rel="noopener">WhatsApp</a></li>
+  <li><a href="mailto:myhomebistro.shikha@gmail.com">myhomebistro.shikha@gmail.com</a></li>
+  <li><a href="https://www.instagram.com/myhomebistro.shikha" target="_blank" rel="noopener">Instagram</a></li>
+  <li><a href="https://www.facebook.com/myhomebistro.shikha/" target="_blank" rel="noopener">Facebook</a></li></ul>
+  <p class="fine">Copyright 2026 Myhomebistro</p>
+</footer>
+<script>
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}), {threshold: .15});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
